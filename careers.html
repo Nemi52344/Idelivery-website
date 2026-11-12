@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Careers | iDelivery</title>
+<meta name="description" content="Join iDelivery and help put zero-emission EVs on India's roads. See our open roles and apply online.">
+<link rel="icon" href="img/mark.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Sora:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"></header>
+
+<main>
+  <!-- 1. Hero -->
+  <section class="hero-full careers-hero">
+    <div class="hero-full-media"><img src="img/careers-team-v3.jpg" alt="The iDelivery team at work beside a Challenger EV in a service hub" fetchpriority="high"></div>
+    <div class="wrap hero-full-inner">
+      <h1 class="display">Build how<br><span class="outline">India moves.</span></h1>
+      <p class="lead">Real work, real impact and room to grow.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#roles">See open roles</a>
+        <a class="btn btn-ghost btn-li" data-linkedin href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.46-2.2 2.96V21h-3.9V9z"/></svg>Follow on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Why join -->
+  <section class="careers-why">
+    <div class="wrap">
+      <div class="head reveal">
+        <div>
+          <h2><span class="hl">Work that</span><span class="hl accent">matters.</span></h2>
+        </div>
+        <p class="lead">Your work shows up on the road, every day.</p>
+      </div>
+      <div class="why-row">
+        <div class="why-i reveal"><b>01</b><strong>Real impact</strong><span>Your work makes city air cleaner.</span></div>
+        <div class="why-i reveal d1"><b>02</b><strong>Own your work</strong><span>Less red tape. More ownership.</span></div>
+        <div class="why-i reveal d2"><b>03</b><strong>Grow fast</strong><span>As we grow, you grow.</span></div>
+        <div class="why-i reveal d3"><b>04</b><strong>Strong backing</strong><span>Backed by Nemi. Built by BNC.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Open roles -->
+  <section id="roles" class="paper careers-roles">
+    <div class="wrap">
+      <div class="roles-head reveal">
+        <div>
+          <h2>Find your <span class="accent">next role.</span></h2>
+        </div>
+        <div class="job-filters" data-job-filters role="toolbar" aria-label="Filter roles by team"></div>
+      </div>
+      <div class="jobs reveal" data-jobs></div>
+      <p class="jobs-none">Don't see your role? <a href="#apply" data-apply-open>Send an open application</a> and we will reach out when a fit opens up.</p>
+    </div>
+  </section>
+
+  <!-- 4. Apply + LinkedIn -->
+  <section id="apply" class="dark grain careers-apply">
+    <div class="wrap split" style="align-items:start">
+      <div class="reveal">
+        <h2>Your next move <span class="accent">starts here.</span></h2>
+        <p class="lead" style="margin-top:20px">Apply in minutes. Hear back within a week.</p>
+        <a class="li-card" data-linkedin href="#" target="_blank" rel="noopener">
+          <span class="li-logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.46-2.2 2.96V21h-3.9V9z"/></svg></span>
+          <span class="li-txt"><b>Connect with us on LinkedIn</b><span>See new roles first. Follow us on LinkedIn.</span></span>
+          <span class="li-go" aria-hidden="true">Follow →</span>
+        </a>
+      </div>
+      <div class="reveal d1">
+        <div class="form-card">
+          <form name="careers-application" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="company-website">
+            <input type="hidden" name="form-name" value="careers-application">
+            <p class="hp"><label>Leave empty <input name="company-website"></label></p>
+            <div class="form-grid">
+              <div class="full"><label for="c-role">Role</label><select id="c-role" name="role" required><option value="">Select a role</option><option>Open application</option></select></div>
+              <div><label for="c-name">Full name</label><input id="c-name" name="name" required autocomplete="name"></div>
+              <div><label for="c-phone">Mobile number</label><input id="c-phone" name="phone" type="tel" required pattern="[0-9+ ]{10,14}" autocomplete="tel" inputmode="tel"></div>
+              <div class="full"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>
+              <div class="full li-field"><label for="c-linkedin">LinkedIn profile</label>
+                <div class="li-input"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.46-2.2 2.96V21h-3.9V9z"/></svg></span><input id="c-linkedin" name="linkedin" type="url" placeholder="https://www.linkedin.com/in/your-name" pattern="https?://(www\.)?linkedin\.com/.+" title="Paste your LinkedIn profile link"></div>
+              </div>
+              <div class="full"><label for="c-cv">CV (PDF, up to 5 MB)</label><input id="c-cv" name="cv" type="file" accept=".pdf,.doc,.docx"></div>
+              <div class="full"><label for="c-note">Why this role? (optional)</label><textarea id="c-note" name="message" rows="3"></textarea></div>
+              <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Send application</button></div>
+            </div>
+            <p class="form-note">We only use your details to review your application.</p>
+          </form>
+          <div class="form-success">
+            <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+            <h3>Application sent</h3>
+            <p>Thank you. Our team will get back to you within a week.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="site.js"></script>
+<script>
+  // "Send an open application" preselects that option in the form.
+  document.querySelector('[data-apply-open]').addEventListener('click', () => { document.getElementById('c-role').value = 'Open application'; });
+</script>
+</body>
+</html>

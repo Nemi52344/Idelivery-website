@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iDelivery | EV Rental, Leasing and Fleet Sales</title>
+<meta name="description" content="Rent, lease or own zero-emission EVs across five Indian cities. Less to manage, more room to grow. iDelivery is a division of Nemi.">
+<link rel="icon" href="img/mark.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Sora:wght@800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-convoy.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"></header>
+
+<main>
+  <!-- 1. Hero + impact numbers -->
+  <section class="hero-full">
+    <div class="hero-full-media"><img src="img/hero-convoy.jpg" alt="A convoy of iDelivery EVs riding down a city road at golden hour" fetchpriority="high"></div>
+    <div class="wrap hero-full-inner">
+      <h1 class="display home-h1"><span class="soft">Electric mobility,</span><br><span class="pop">simplified.</span></h1>
+      <p class="lead">Zero-emission EVs for riders and businesses. We take care of everything else.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="fleet.html#enquire">Partner with us</a>
+        <a class="btn btn-ghost" href="#services">Explore services</a>
+      </div>
+    </div>
+    <div class="wrap hero-full-stats"><div class="stats" data-stats></div></div>
+  </section>
+
+  <!-- 3. What we do -->
+  <section id="services">
+    <div class="wrap">
+      <div class="head solo reveal">
+        <h2 class="oneline">Rent, lease or own. <span class="accent">Zero hassle.</span></h2>
+      </div>
+      <div class="sboxes">
+        <button class="sbox reveal" type="button" data-open="svc-rent" aria-haspopup="dialog">
+          <span class="sbox-art art-photo" aria-hidden="true"><img src="img/rider-banner.jpg" alt="" loading="lazy" style="object-position:45% 30%"></span>
+          <span class="sbox-top"><span class="sbox-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3 21 2M16 7l3 3M19 4l2 2"/></svg></span><span class="sbox-n">01</span></span>
+          <span class="sbox-body"><b>EV rental</b>
+          <span class="sbox-t">Earn from day one. Zero down payment, zero repair bills, zero stress.</span>
+          <span class="sbox-more">View details <i aria-hidden="true">+</i></span></span>
+        </button>
+        <button class="sbox reveal d1" type="button" data-open="svc-lease" aria-haspopup="dialog">
+          <span class="sbox-art art-photo" aria-hidden="true"><img src="img/fleet-riders.jpg" alt="" loading="lazy" style="object-position:40% 45%"></span>
+          <span class="sbox-top"><span class="sbox-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span><span class="sbox-n">02</span></span>
+          <span class="sbox-body"><b>EV leasing</b>
+          <span class="sbox-t">A full fleet with zero upfront. Less to manage, more room to grow.</span>
+          <span class="sbox-more">View details <i aria-hidden="true">+</i></span></span>
+        </button>
+        <button class="sbox reveal d2" type="button" data-open="svc-bulk" aria-haspopup="dialog">
+          <span class="sbox-art art-photo" aria-hidden="true"><img src="img/bulk-lineup.jpg" alt="" loading="lazy" style="object-position:50% 72%"></span>
+          <span class="sbox-top"><span class="sbox-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><span class="sbox-n">03</span></span>
+          <span class="sbox-body"><b>Own your fleet</b>
+          <span class="sbox-t">Own the fleet and let AI keep watch. Live updates on every EV, with no delays.</span>
+          <span class="sbox-more">View details <i aria-hidden="true">+</i></span></span>
+        </button>
+      </div>
+    </div>
+
+    <dialog class="smodal" id="svc-rent" aria-labelledby="svc-rent-t" data-lenis-prevent>
+      <div class="smodal-media">
+        <img src="img/rider-portrait.jpg" alt="A rider standing beside the iDelivery EV" loading="lazy" style="object-position:50% 30%">
+        <div class="smodal-cap"><span class="sm-tag">01 · EV rental</span><h3 id="svc-rent-t">Your EV, ready today.</h3></div>
+      </div>
+      <button class="smodal-x" type="button" data-close aria-label="Close">×</button>
+      <div class="smodal-body">
+        <p class="smodal-msg">Pick a plan and ride away. We take care of the rest.</p>
+        <span class="sm-label">What you get</span>
+        <ul class="sm-facts">
+          <li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg></i>Start with zero down payment.</li>
+          <li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg></i>Servicing and maintenance are on us.</li>
+          <li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg></i>Live on our map, with support one call away.</li>
+        </ul>
+        <span class="sm-label">Best for</span>
+        <div class="sm-chips"><span>Delivery riders</span><span>Gig workers</span><span>Small businesses</span></div>
+        <div class="sm-foot"><a class="btn btn-primary" href="riders.html#plans">See rental plans</a></div>
+      </div>
+    </dialog>
+
+    <dialog class="smodal" id="svc-lease" aria-labelledby="svc-lease-t" data-lenis-prevent>
+      <div class="smodal-media">
+        <img src="img/fleet-riders-wide.jpg" alt="Riders lined up on leased iDelivery EVs at a hub" loading="lazy" style="object-position:40% 50%">
+        <div class="smodal-cap"><span class="sm-tag">02 · EV leasing</span><h3 id="svc-lease-t">Lease a fleet. Lose the hassle.</h3></div>
+      </div>
+      <button class="smodal-x" type="button" data-close aria-label="Close">×</button>
+      <div class="smodal-body">
+        <p class="smodal-msg">We run the EVs. You run the business.</p>
+        <span class="sm-label">What you get</span>
+        <ul class="sm-facts">
+          <li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg></i>Zero upfront cost. Zero depreciation.</li>
+          <li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg></i>Repairs and maintenance are on us.</li>
+          <li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg></i>Live AI updates on every EV and rider.</li>
+        </ul>
+        <span class="sm-label">Best for</span>
+        <div class="sm-chips"><span>Delivery platforms</span><span>Dark stores</span><span>Courier companies</span></div>
+        <div class="sm-foot"><a class="btn btn-primary" href="fleet?need=lease#enquire">Get a lease quote</a></div>
+      </div>
+    </dialog>
+
+    <dialog class="smodal" id="svc-bulk" aria-labelledby="svc-bulk-t" data-lenis-prevent>
+      <div class="smodal-media">
+        <img src="img/real/india-post-rider.jpg" alt="An India Post rider on her new iDelivery EV, with her team around her" loading="lazy" style="object-position:50% 34%">
+        <div class="smodal-cap"><span class="sm-tag">03 · Own your fleet</span><h3 id="svc-bulk-t">The fleet is yours. The upkeep is ours.</h3></div>
+      </div>
+      <button class="smodal-x" type="button" data-close aria-label="Close">×</button>
+      <div class="smodal-body">
+        <p class="smodal-msg">We take care of your fleet. You take care of the business.</p>
+        <span class="sm-label">What you get</span>
+        <ul class="sm-facts">
+          <li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg></i>Volume pricing that rewards growth.</li>
+          <li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg></i>Range for the longest shift, up to 180 km a charge.</li>
+          <li><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg></i>Live tracking and local service wherever you run.</li>
+        </ul>
+        <span class="sm-label">Best for</span>
+        <div class="sm-chips"><span>Logistics companies</span><span>Enterprises</span><span>Fleet owners</span></div>
+        <div class="sm-foot"><a class="btn btn-primary" href="fleet?need=own#enquire">Get a fleet quote</a></div>
+      </div>
+    </dialog>
+  </section>
+
+  <!-- 4. Where we run -->
+  <section id="cities" class="city-sec">
+    <div class="wrap">
+      <div class="head reveal">
+        <div>
+          <h2><span class="hl">Wherever you run,</span><span class="hl accent">we are close by.</span></h2>
+        </div>
+        <p class="lead">Five cities, with a local team a call away. Less downtime, more time on the road.</p>
+      </div>
+      <div class="cities">
+        <div class="city-map reveal" data-city-map aria-label="Map of iDelivery cities in India"></div>
+        <ul class="city-list reveal d1" data-city-list></ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 6. Mission -->
+  <section id="mission" class="dark grain mission-sec">
+    <div class="mission-glow" aria-hidden="true"><i></i><i></i></div>
+    <div class="wrap">
+      <p class="statement mission-lines reveal">
+        <span class="ml"><span class="ml-in">Easier for <em>riders.</em></span></span>
+        <span class="ml"><span class="ml-in">Cleaner for <em>cities.</em></span></span>
+        <span class="ml"><span class="ml-in">Simpler for <em>business.</em></span></span>
+      </p>
+      <div class="pillars mission-pillars reveal">
+        <div>
+          <span class="pl-n">01</span>
+          <i class="pl-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5 21v-1a7 7 0 0 1 14 0v1"/></svg></i>
+          <b>Rider-first</b>
+          <span>A serviced EV, safety training and support whenever riders need it.</span>
+        </div>
+        <div>
+          <span class="pl-n">02</span>
+          <i class="pl-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.2-6.1"/></svg></i>
+          <b>Zero emission</b>
+          <span>Zero tailpipe emissions, on every shift.</span>
+        </div>
+        <div>
+          <span class="pl-n">03</span>
+          <i class="pl-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></i>
+          <b>Built to scale</b>
+          <span>Grow your fleet without growing your headaches.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CO2 cut -->
+  <section id="impact" class="co2-sec">
+    <img class="co2-bg" src="img/cleaner-air-riders.webp" alt="" aria-hidden="true" loading="lazy">
+    <div class="wrap co2-grid">
+      <div class="reveal">
+        <h2><span class="hl">Less CO₂,</span><span class="hl accent">every single day.</span></h2>
+        <p class="lead">Go zero emission and grow your business at the same time.</p>
+        <div class="btn-row"><a class="btn btn-primary" href="fleet.html#enquire">Partner with us</a></div>
+      </div>
+      <div class="co2-card reveal d1" data-co2>
+        <div class="co2-big"><b><span data-co2-tonnes>0</span><small> tonnes</small></b><span>of tailpipe CO₂ our fleet avoids every year</span></div>
+        <div class="co2-row">
+          <div><b data-co2-per>0</b><span>kg of CO₂ avoided per EV each year</span></div>
+          <div><b data-co2-trees>0</b><span>trees it would take to absorb the same CO₂</span></div>
+        </div>
+        <p class="co2-note">Estimate based on <span data-co2-evs></span> EVs riding 80 km a day, compared with a petrol two-wheeler at 45 km per litre and 2.31 kg of CO₂ per litre. One tree absorbs about 21 kg of CO₂ a year.</p>
+      </div>
+    </div>
+  </section>
+  <!-- 8. Trust: clients and partners -->
+  <section id="partners" class="partners-sec">
+    <div class="wrap">
+      <div class="head reveal">
+        <div>
+          <h2><span class="hl">Brands that move India</span><span class="hl accent">run on iDelivery.</span></h2>
+        </div>
+        <p class="lead">Trusted by leading fleets and backed by strong energy and finance partners.</p>
+      </div>
+
+      <p class="pt-label reveal">Fleet and enterprise customers</p>
+      <div class="logo-marquee reveal" data-clients aria-label="Fleet and enterprise customers"></div>
+
+      <div class="pt-groups">
+        <div class="pt-group reveal">
+          <p class="pt-label">Battery and swapping partners</p>
+          <ul class="pt-cards">
+            <li class="pt-logo"><img src="img/partners/sun-mobility.png" alt="SUN Mobility" loading="lazy"></li>
+            <li class="pt-logo"><img src="img/partners/emo-energy.png" alt="EMO Energy" loading="lazy"></li>
+          </ul>
+        </div>
+        <div class="pt-group reveal d1">
+          <p class="pt-label">Financial partners</p>
+          <ul class="pt-cards">
+            <li class="pt-todo">Partner logo</li>
+            <li class="pt-todo">Partner logo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="india-states.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

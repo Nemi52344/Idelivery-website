@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Riders | Ride an EV with iDelivery</title>
+<meta name="description" content="Ride an iDelivery EV for your deliveries. There is no down payment, servicing is included, and you can choose a daily, weekly or monthly plan.">
+<link rel="icon" href="img/mark.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Sora:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"></header>
+
+<main>
+  <!-- 1. Hero + rider numbers -->
+  <section class="hero-full riders-hero">
+    <div class="hero-full-media"><img src="img/riders-hero.jpg" alt="A smiling rider on an iDelivery EV on a city street" fetchpriority="high"></div>
+    <div class="wrap hero-full-inner">
+      <h1 class="display">Earn more.<br><span class="outline">Worry less.</span></h1>
+      <p class="lead">One fixed rent. No petrol bills. No repair bills<sup class="ast">*</sup>.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#apply">Apply in 2 minutes</a>
+        <a class="btn btn-ghost" href="#plans">See plans</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. What you get -->
+  <section id="get" class="screen">
+    <div class="wrap">
+      <div class="head solo reveal">
+        <h2 class="oneline">One rent. <span class="accent">Zero worries.</span></h2>
+      </div>
+      <div class="sboxes rcards">
+        <div class="sbox rcard reveal">
+          <span class="sbox-art art-photo" aria-hidden="true"><img src="img/rider-handover.jpg" alt="" loading="lazy" style="object-position:50% 60%"></span>
+          <span class="sbox-top"><span class="sbox-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3 21 2M16 7l3 3M19 4l2 2"/></svg></span><span class="sbox-n">01</span></span>
+          <span class="sbox-body"><b>A ready EV</b><span class="sbox-t">Charged, checked and ready when you are.</span></span>
+        </div>
+        <div class="sbox rcard reveal d1">
+          <span class="sbox-art art-photo" aria-hidden="true"><img src="img/rider-workshop.jpg" alt="" loading="lazy" style="object-position:50% 60%"></span>
+          <span class="sbox-top"><span class="sbox-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span><span class="sbox-n">02</span></span>
+          <span class="sbox-body"><b>Service and repairs</b><span class="sbox-t">We maintain it. If a repair takes time, you get another EV.</span></span>
+        </div>
+        <div class="sbox rcard reveal d2">
+          <span class="sbox-art art-photo" aria-hidden="true"><img src="img/real/handover-dindigul.jpg" alt="" loading="lazy" style="object-position:62% 60%"></span>
+          <span class="sbox-top"><span class="sbox-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span class="sbox-n">03</span></span>
+          <span class="sbox-body"><b>Paperwork done</b><span class="sbox-t">Bring your licence. We handle the rest.</span></span>
+        </div>
+        <div class="sbox rcard reveal d3">
+          <span class="sbox-art art-photo" aria-hidden="true"><img src="img/real/rider-app.jpg" alt="" loading="lazy" style="object-position:50% 60%"></span>
+          <span class="sbox-top"><span class="sbox-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="sbox-n">04</span></span>
+          <span class="sbox-body"><b>Safe on every ride</b><span class="sbox-t">We can see your ride, and help is a call away.</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Savings calculator -->
+  <section id="savings" class="dark calc-section grain screen">
+    <div class="wrap calc">
+      <div class="reveal">
+        <h2>See how much <span class="accent">you could keep.</span></h2>
+        <div class="calc-inputs">
+          <div class="range">
+            <div class="range-top"><label for="c-km">Kilometres a day</label><output id="o-km">100 km</output></div>
+            <input type="range" id="c-km" min="20" max="250" step="5" value="100">
+          </div>
+          <div class="range">
+            <div class="range-top"><label for="c-days">Working days a month</label><output id="o-days">26 days</output></div>
+            <input type="range" id="c-days" min="10" max="31" step="1" value="26">
+          </div>
+          <details class="assume">
+            <summary>Change assumptions</summary>
+            <div class="form-grid" style="margin-top:16px">
+              <div><label for="c-petrol">Petrol price (₹/litre)</label><input id="c-petrol" type="number" value="103" min="50" max="200"></div>
+              <div><label for="c-mileage">Your petrol vehicle's mileage (km/litre)</label><input id="c-mileage" type="number" value="45" min="10" max="100"></div>
+              <div><label for="c-ev">Charging cost (₹/km)</label><input id="c-ev" type="number" value="0.30" step="0.05" min="0" max="5"></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="calc-result reveal d1" aria-live="polite">
+        <div class="cost-vs">
+          <div class="cost-tile petrol">
+            <span class="ct-label">Petrol</span>
+            <strong id="r-petrol">₹0</strong>
+            <span class="ct-sub">a month · <b id="r-petrol-km">₹0</b> per km</span>
+          </div>
+          <div class="cost-tile ev">
+            <span class="ct-label"><i aria-hidden="true">⚡</i> Electric</span>
+            <strong id="r-ev">₹0</strong>
+            <span class="ct-sub">a month · <b id="r-ev-km">₹0</b> per km</span>
+          </div>
+        </div>
+        <div class="calc-save">
+          <span>You keep up to</span>
+          <strong id="r-save">₹0</strong>
+          <span>more every month, which is <b id="r-year">₹0</b> a year.</span>
+        </div>
+        <a class="btn btn-primary" href="#apply" style="width:100%">Start saving</a>
+        <p class="calc-note">This estimate covers energy cost only, before rent, and it changes with traffic, load and local prices.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Plans -->
+  <section id="plans" class="paper screen">
+    <div class="wrap">
+      <div class="head reveal">
+        <div>
+          <h2>Your shift. <span class="accent">Your plan.</span></h2>
+        </div>
+        <p class="lead">One rent covers servicing, maintenance and insurance.</p>
+      </div>
+      <div class="plans">
+        <div class="plan reveal">
+          <h3>Daily</h3>
+          <div class="price">₹XXX<small> / day</small></div>
+          <p>Ride for a day and see the savings.</p>
+          <ul class="checks"><li>No commitment.</li><li>We handle the servicing.</li><li>Upgrade your plan any time.</li></ul>
+          <a class="btn btn-line" href="#apply" data-plan="Daily">Choose Daily</a>
+        </div>
+        <div class="plan featured reveal d1">
+          <span class="badge">Most riders</span>
+          <h3>Weekly</h3>
+          <div class="price">₹X,XXX<small> / week</small></div>
+          <p>Pay weekly, right when your payouts land.</p>
+          <ul class="checks"><li>Save more than on daily.</li><li>We handle every repair.</li><li>Keep earning during repairs.</li></ul>
+          <a class="btn btn-primary" href="#apply" data-plan="Weekly">Choose Weekly</a>
+        </div>
+        <div class="plan reveal d2">
+          <h3>Monthly</h3>
+          <div class="price">₹X,XXX<small> / month</small></div>
+          <p>Built for riders who ride every day.</p>
+          <ul class="checks"><li>Your best daily rate.</li><li>First in line for service.</li><li>Ride now, own it later.</li></ul>
+          <a class="btn btn-line" href="#apply" data-plan="Monthly">Choose Monthly</a>
+        </div>
+      </div>
+      <p class="fineprint">A refundable deposit applies. Rent and deposit vary by city and model, and we confirm the exact amount on your call.</p>
+    </div>
+  </section>
+
+  <!-- 5. Apply -->
+  <section id="apply" class="dark grain">
+    <div class="wrap split" style="align-items:start">
+      <div class="reveal">
+        <h2>Start earning <span class="accent">this week.</span></h2>
+        <p class="lead" style="margin-top:20px">One short form. One call. Then you ride.</p>
+        <div class="bigsteps" style="grid-template-columns:1fr;margin-top:40px">
+          <div class="bigstep" style="display:grid;grid-template-columns:80px 1fr;gap:16px;padding:22px 0;margin:0;border-right:0;border-bottom:1px solid var(--line-dark)"><span class="num" style="font-size:3rem;margin:0">01</span><div><h3>Apply</h3><p>It takes two minutes on your phone.</p></div></div>
+          <div class="bigstep" style="display:grid;grid-template-columns:80px 1fr;gap:16px;padding:22px 0;margin:0;border-right:0;border-bottom:1px solid var(--line-dark)"><span class="num" style="font-size:3rem;margin:0">02</span><div><h3>Verify</h3><p>Bring your licence, Aadhaar, PAN, address proof and bank details. We do the rest.</p></div></div>
+          <div class="bigstep" style="display:grid;grid-template-columns:80px 1fr;gap:16px;padding:22px 0;margin:0;border-right:0"><span class="num" style="font-size:3rem;margin:0">03</span><div><h3>Ride</h3><p>Pay your first rent and deposit, and ride away.</p></div></div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <div class="form-card">
+          <form name="rider-application" method="POST" data-netlify="true" netlify-honeypot="company-website">
+            <input type="hidden" name="form-name" value="rider-application">
+            <p class="hp"><label>Leave empty <input name="company-website"></label></p>
+            <div class="form-grid">
+              <div class="full"><label for="r-name">Full name</label><input id="r-name" name="name" required autocomplete="name"></div>
+              <div><label for="r-phone">Mobile number</label><input id="r-phone" name="phone" type="tel" required pattern="[0-9+ ]{10,14}" autocomplete="tel" inputmode="tel"></div>
+              <div><label for="r-city">City</label>
+                <select id="r-city" name="city" required>
+                  <option value="">Select city</option>
+                  <option>Bengaluru</option><option>Chennai</option><option>Coimbatore</option>
+                  <option>Delhi</option><option>Mumbai</option><option>Other</option>
+                </select>
+              </div>
+              <div><label for="r-platform">You ride for</label>
+                <select id="r-platform" name="platform">
+                  <option value="">Select</option>
+                  <option>Food delivery</option><option>Grocery / quick commerce</option>
+                  <option>Parcel / courier</option><option>Ride-hailing</option><option>Not riding yet</option>
+                </select>
+              </div>
+              <div><label for="r-plan">Plan</label>
+                <select id="r-plan" name="plan">
+                  <option>Weekly</option><option>Daily</option><option>Monthly</option><option>Not sure</option>
+                </select>
+              </div>
+              <div class="full"><label for="r-licence">Two-wheeler licence?</label>
+                <select id="r-licence" name="licence" required>
+                  <option value="">Select</option><option>Yes</option><option>Applied / learner's licence</option><option>No</option>
+                </select>
+              </div>
+              <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Request a call back</button></div>
+            </div>
+            <p class="form-note">We will only use your number to call you about your application.</p>
+          </form>
+          <div class="form-success">
+            <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+            <h3>Thanks, we've got it</h3>
+            <p>Our team will call you within one working day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FAQ -->
+  <section id="faq">
+    <div class="wrap faq-wrap">
+      <div class="reveal">
+        <h2>Rider <span class="accent">FAQ</span></h2>
+      </div>
+      <div class="faq reveal d1">
+        <details><summary>Do I need to pay anything upfront?</summary><p>No down payment. You pay your first rent and a refundable deposit at collection, and we confirm the amount on the call.</p></details>
+        <details><summary>What happens if my EV breaks down?</summary><p>Call our service line. We guide you, send help or give you another EV if the repair takes time.</p></details>
+        <details><summary>Can I use the EV for any delivery app?</summary><p>Yes. Ride for any platform you like.</p></details>
+        <details><summary>Can I stop my plan?</summary><p>Yes. Give the notice your plan requires, return the EV in working condition, and get your deposit back after inspection.</p></details>
+        <details><summary>Am I safe while riding?</summary><p>Our support team is one call away, and we can see your ride live.</p></details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

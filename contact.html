@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | iDelivery</title>
+<meta name="description" content="Call, WhatsApp or write to iDelivery about renting, leasing or owning a fleet of EVs.">
+<link rel="icon" href="img/mark.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Sora:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"></header>
+
+<main>
+  <section class="hero">
+    <div class="hero-media kenburns"><img src="img/ride-night.jpg" alt="An iDelivery rider on an EV at night" style="object-position:60% center"></div>
+    <div class="wrap">
+      <div class="hero-inner" style="padding-bottom:96px">
+        <h1 class="display" style="font-size:clamp(2.8rem,7vw,6.4rem)">Talk to<br><span class="outline">us.</span></h1>
+        <p class="lead">One message reaches the right team.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="routes">
+        <a class="route reveal" href="riders.html#apply">
+          <span class="n">01</span>
+          <h3>I want<br>to ride</h3>
+          <p>Two minutes now. A call from us within one working day.</p>
+          <span class="go">Rider application →</span>
+        </a>
+        <a class="route reveal d1" href="fleet.html#enquire">
+          <span class="n">02</span>
+          <h3>I run<br>a business</h3>
+          <p>Get your fleet quote within two working days.</p>
+          <span class="go">Business enquiry →</span>
+        </a>
+        <a class="route reveal d2" data-contact-route="whatsapp" href="#" target="_blank" rel="noopener">
+          <span class="n">03</span>
+          <h3>My EV<br>needs help</h3>
+          <p>One WhatsApp message gets you back on the road.</p>
+          <span class="go">WhatsApp service →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark grain">
+    <div class="wrap split" style="align-items:start">
+      <div class="reveal">
+        <h2>Write to <span class="accent">us</span></h2>
+        
+        <ul class="contact-list">
+          <li><b>Call</b><a data-contact="phone" href="#"></a></li>
+          <li><b>Email</b><a data-contact="email" href="#"></a></li>
+          <li><b>Head office</b><span>Nemi, [address line], [city] [PIN]</span></li>
+        </ul>
+      </div>
+      <div class="reveal d1">
+        <div class="form-card">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="company-website">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hp"><label>Leave empty <input name="company-website"></label></p>
+            <div class="form-grid">
+              <div><label for="c-name">Name</label><input id="c-name" name="name" required autocomplete="name"></div>
+              <div><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+              <div class="full"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>
+              <div class="full"><label for="c-topic">Topic</label>
+                <select id="c-topic" name="topic">
+                  <option>General question</option><option>I already ride with iDelivery</option><option>Partnership</option><option>Media</option><option>Careers</option>
+                </select>
+              </div>
+              <div class="full"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required></textarea></div>
+              <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Send message</button></div>
+            </div>
+          </form>
+          <div class="form-success">
+            <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+            <h3>Message sent</h3>
+            <p>We will reply within one working day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
