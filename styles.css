@@ -276,7 +276,7 @@ section { padding: 152px 0; position: relative; }
 .turn-step .n { font-size: .82rem; font-weight: 800; letter-spacing: .18em; color: var(--orange); margin-bottom: 14px; }
 .turn-step h3 { font-size: clamp(1.8rem, 3vw, 2.6rem); text-transform: uppercase; margin-bottom: 16px; }
 .turn-step p { color: var(--muted-dark); max-width: 440px; }
-.turn-step ul { list-style: none; margin-top: 22px; display: grid; gap: 10px; }
+.turn-step ul { list-style: none; margin-top: 22px; display: grid; gap: 12px; }
 .turn-step li { display: flex; gap: 12px; align-items: center; font-weight: 600; }
 .turn-step li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
 @media (max-width: 900px) {
@@ -1107,7 +1107,7 @@ h2.oneline { white-space: nowrap; }
 .smodal[open] { display: grid; grid-template-columns: 0.95fr 1.05fr; }
 .smodal-media { aspect-ratio: auto; height: 100%; min-height: 100%; }
 .smodal-media::after { background: linear-gradient(90deg, transparent 55%, var(--space) 100%), linear-gradient(0deg, rgba(6,5,9,.35), transparent 40%); }
-.smodal-body { padding: 44px 44px 40px 36px; display: flex; flex-direction: column; justify-content: center; overflow: auto; }
+.smodal-body { padding: 44px 44px 40px 36px; display: flex; flex-direction: column; justify-content: safe center; overflow: auto; min-height: 0; }
 .smodal-body h3 { font-size: 1.6rem; line-height: 1.2; margin: 12px 0 14px; }
 .smodal-msg { font-size: 1.02rem; line-height: 1.6; color: rgba(255,255,255,.82) !important; }
 .smodal-body .svc-list { margin-top: 22px; gap: 10px; flex: none; }
@@ -1193,14 +1193,14 @@ h2.oneline { white-space: nowrap; }
 .smodal-body { padding: 52px 44px 40px; justify-content: center; gap: 0; }
 .smodal-body::before { content: ""; position: absolute; top: 0; right: 0; width: 50%; height: 3px; background: linear-gradient(90deg, var(--orange), var(--teal)); }
 .smodal-msg { font-size: 1.06rem; margin: 0; }
-.sm-label { display: block; margin: 26px 0 12px; font-size: .68rem; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: rgba(255,255,255,.5); }
-.sm-facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.sm-label { display: block; margin: 23px 0 12px; font-size: .68rem; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+.sm-facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .sm-facts li { display: flex; gap: 12px; align-items: flex-start; font-size: .95rem; line-height: 1.45; color: rgba(255,255,255,.88); }
 .sm-facts i { flex: none; width: 22px; height: 22px; margin-top: 1px; border-radius: 50%; display: grid; place-items: center; background: rgba(49,214,198,.14); color: var(--teal); }
 .sm-facts i svg { width: 13px; height: 13px; }
 .sm-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .sm-chips span { padding: 7px 14px; border-radius: 4px; border: 1px solid var(--hair-strong); background: rgba(255,255,255,.04); font-size: .82rem; color: rgba(255,255,255,.85); }
-.sm-foot { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--hair); }
+.sm-foot { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--hair); }
 .smodal-body .sm-foot .btn { margin: 0; }
 .sm-link { font-size: .9rem; font-weight: 600; color: var(--white); text-decoration: none; }
 .sm-link span { display: inline-block; color: var(--orange); transition: transform .3s var(--ease); }
@@ -1608,7 +1608,9 @@ h2.oneline { white-space: nowrap; }
 /* Client strip injected on every page except home */
 main > section.clients-strip { padding: 56px 0 60px; background: #faf9f7; border-top: 1px solid rgba(7,6,11,.06); }
 .clients-strip .pt-label { text-align: center; margin-bottom: 20px; }
-.pt-cards .pt-logo { padding: 18px 28px; } .pt-cards .pt-logo img { max-width: 100%; max-height: 58px; width: auto; height: auto !important; object-fit: contain; }
+.pt-cards .pt-logo { padding: 18px 28px; }
+.pt-cards .pt-logo.is-stacked { padding: 10px 28px; }
+.pt-cards .pt-logo.is-stacked img { max-height: 84px; } .pt-cards .pt-logo img { max-width: 100%; max-height: 58px; width: auto; height: auto !important; object-fit: contain; }
 
 /* ===== Shared: a section that fills one screen on desktop ===== */
 @media (min-width: 901px) {
@@ -2450,4 +2452,81 @@ main > section.gr-sec::before, main > section.gr-sec::after { content: none !imp
   .team-v2 .lead-card:nth-child(3) { grid-column: 1 / -1; }
   .team-v2 .lc-photo { height: 190px; }
   .team-v2 .crew-team { grid-template-columns: 1fr; gap: 14px; padding: 18px; }
+}
+
+/* ── Team v4: editorial leadership row, designed monograms, structured ops strip ── */
+.team-v2 .crew { gap: clamp(18px, 2.4vh, 26px) clamp(18px, 2vw, 26px); }
+
+/* portrait tiles */
+.team-v2 .lc-photo {
+  height: clamp(210px, 40vh, 370px);
+  background:
+    radial-gradient(120% 95% at 16% 10%, rgba(255,115,16,.13), transparent 58%),
+    radial-gradient(115% 95% at 86% 92%, rgba(49,214,198,.16), transparent 56%),
+    linear-gradient(168deg, #f6f1ea 0%, #ece9e4 55%, #e6ebea 100%);
+  box-shadow: inset 0 0 0 1px rgba(7,6,11,.08);
+}
+.team-v2 .lc-photo img { position: relative; z-index: 1; }
+
+/* faint drafting grid, monogram tiles only */
+.team-v2 .lc-mono::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .38;
+  background-image:
+    linear-gradient(rgba(7,6,11,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7,6,11,.05) 1px, transparent 1px);
+  background-size: 54px 54px;
+  -webkit-mask-image: radial-gradient(85% 75% at 50% 45%, #000 35%, transparent 100%);
+  mask-image: radial-gradient(85% 75% at 50% 45%, #000 35%, transparent 100%);
+}
+
+/* index number */
+.team-v2 .lc-photo .lc-idx {
+  position: absolute; z-index: 3; top: 14px; left: 15px;
+  font-size: .64rem; font-weight: 700; letter-spacing: .24em;
+  color: rgba(7,6,11,.34);
+}
+
+/* monogram initials */
+.team-v2 .lc-mono .lc-ini {
+  position: relative; z-index: 2;
+  font-size: clamp(4.2rem, 14vh, 7.6rem); font-weight: 200; letter-spacing: .06em; line-height: 1;
+  background: linear-gradient(145deg, rgba(7,6,11,.46) 10%, rgba(7,6,11,.14) 90%);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+
+/* accent rule: always present, runs full width on hover */
+.team-v2 .lc-photo::after { height: 2px; z-index: 2; transform: scaleX(.16); }
+.team-v2 .lead-card { transition: transform .55s var(--expo); }
+@media (hover: hover) {
+  .team-v2 .lead-card:hover { transform: translateY(-6px); }
+  .team-v2 .lead-card:hover .lc-photo::after { transform: scaleX(1); }
+}
+
+/* name block */
+.team-v2 .lc-body { padding-top: clamp(13px, 1.9vh, 17px); gap: 5px; }
+.team-v2 .lc-body b { font-size: clamp(1.06rem, 2.7vh, 1.32rem); letter-spacing: -.012em; }
+.team-v2 .lc-role { font-size: .63rem; font-weight: 700; letter-spacing: .2em; color: var(--orange); }
+.team-v2 .lc-from { font-size: .74rem; color: var(--muted); }
+.team-v2 .lc-from-nemi i { background: var(--teal); }
+
+/* subsidiary team: same card language, one tone quieter */
+.crew-sub { grid-column: 1 / -1; display: grid; gap: clamp(14px, 2vh, 20px); margin-top: clamp(16px, 2.6vh, 30px); }
+.crew-sub-head { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding-bottom: clamp(10px, 1.4vh, 14px); border-bottom: 1px solid var(--line); }
+.crew-sub-head .pt-label { margin: 0; letter-spacing: .26em; color: var(--muted); }
+.crew-sub-grid { margin: 0; }
+.crew-sub .lc-photo { height: clamp(185px, 34vh, 320px); }
+.crew-sub .lc-mono .lc-ini { font-size: clamp(3.6rem, 12vh, 6.4rem); }
+.crew-sub .lc-body b { font-size: clamp(1rem, 2.4vh, 1.18rem); }
+/* join link, on light ground */
+.team-v2 .crew-sub .crew-join { margin: 0; padding: 0; border: 0; color: var(--ink); text-align: right; }
+.team-v2 .crew-sub .crew-join span { font-size: .76rem; color: var(--muted); }
+.team-v2 .crew-sub .crew-join b { justify-content: flex-end; gap: 10px; font-size: .92rem; }
+
+@media (max-width: 760px) {
+  .team-v2 .lc-photo { height: 200px; }
+  .team-v2 .lc-mono .lc-ini { font-size: clamp(2.6rem, 15vw, 4.2rem); }
+  .crew-sub .lc-photo { height: 180px; }
+  .crew-sub-head { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .team-v2 .crew-sub .crew-join, .team-v2 .crew-sub .crew-join b { text-align: left; justify-content: flex-start; }
 }

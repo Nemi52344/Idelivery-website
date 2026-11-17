@@ -60,7 +60,7 @@ function header() {
 function footer() {
   return `
   <div class="wrap">
-    <p class="foot-big">Go <span>electric.</span><br>Zero hassle.</p>
+    <p class="foot-big">Go <span>electric.</span><br>No hassle.</p>
     <div class="foot-grid">
       <div>
         <a class="brand" href="index.html">
