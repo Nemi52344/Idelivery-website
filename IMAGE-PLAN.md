@@ -6,22 +6,30 @@ we've just done, and **three are genuine photographs**. The remaining
 
 ---
 
-## The real problem
+## Correction to an earlier version of this note
 
-It isn't only that they look synthetic. Two things are worse than that:
+An earlier draft of this file claimed the AI images "invent a generic e-scooter"
+and that none of them showed your bike. **That was wrong.** Most of the generated
+images on the site do show the BNC Challenger — the exoskeleton tubular frame,
+the flat bench seat, the round halo headlight, the tubular front crash guard and
+the side cargo racks are all there, mostly in blue. `fleet-riders.jpg`,
+`bulk-lineup.jpg`, `rider-banner.jpg`, `rider-portrait.jpg` and
+`rider-workshop.jpg` are all recognisably the Challenger.
 
-**1. The bikes aren't yours.** Every AI image invents a generic e-scooter. You
-manufacture the S110 and S125 — the product *is* the company. A visitor who
-knows your bikes will see something that isn't one, and a visitor who doesn't
-will form the wrong impression of what they're renting.
+Acting on that wrong premise, three of them were regenerated and had to be put
+back. **Do not replace an image on the assumption the bike is wrong — open it and
+check against the renders in `circuit/data/product/Challenger 110/` first.**
 
-**2. Several aren't India.** `rider-workshop.jpg`, used on the riders page under
-"Maintenance", shows a white European mechanic in a European workshop. The home
-hero has a generic Western skyline. For a company operating in Delhi, Mumbai,
-Bengaluru, Chennai and Coimbatore, that's a brand problem, not a quality one.
+## What is actually worth fixing
 
-Re-generating with better prompts fixes the polish. It does **not** fix either of
-these, because the model has never seen your bike.
+**Setting, not product.** `rider-workshop.jpg`, used on the riders page under
+"Maintenance", shows a white European mechanic in a clean European workshop. The
+home hero has a generic Western skyline. For a company operating in Delhi,
+Mumbai, Bengaluru, Chennai and Coimbatore, that's a brand problem — but it's
+about where the picture is set and who is in it, not about the bike.
+
+**Polish.** Some of them read as rendered rather than photographed. That is a
+real but much smaller issue than a wrong product would have been.
 
 ---
 
@@ -38,10 +46,13 @@ not coincidentally, the only ones that carry any proof.
 
 ---
 
-## Images that must show the real bike (14)
+## Images a real photograph would still improve (14)
 
-A photographer — or anyone with a recent phone — could shoot all of these in a day
-across one or two cities. You have 604 bikes in operation.
+Not because the bike is wrong in them — in most cases it isn't — but because a
+real photograph carries proof that a generated one never can, and fixes the
+setting problems above at the same time. A photographer, or anyone with a recent
+phone, could shoot all of these in a day across one or two cities. You have 604
+bikes in operation.
 
 | File | Where it appears | Shot needed |
 |---|---|---|
@@ -84,12 +95,14 @@ nothing false is being claimed about the vehicle.
 option that puts your actual bike on your own website, and it's a day's work, not
 a production.
 
-**B. Generate using your real bike as a reference.** GPT 2.6 accepts reference
-images. Feeding it `india-post-rider.jpg` would make the generated bikes resemble
-yours rather than a stock scooter, and the prompts can specify Indian streets,
-Indian riders and Indian workshops. Better than what's there now, and honest about
-setting — but the bike would still be a likeness, not a photograph of your product.
+**B. Generate using the product renders as a reference.** GPT 2.6 accepts
+reference images. The renders in `circuit/data/product/Challenger 110/` are the
+right source, and the prompt must spell out the Challenger's shape — exoskeleton
+frame, flat bench seat, halo headlight, tubular crash guard, leading-link forks,
+twin rear shocks, side cargo racks. Without that wording the model falls back on
+a generic scooter whatever references it is given. Even done well the bike is a
+likeness, not a photograph of your product.
 
-A sensible split: **B now** so the site stops looking wrong today, **A over the
-next few weeks** as real photos come in, replacing them file by file. The filenames
-stay the same, so each swap is a drop-in with no code change.
+Since the bike in the current images is already right, there is **no urgency**
+here. Replace them as real photographs come in, file by file. The filenames stay
+the same, so each swap is a drop-in with no code change.
