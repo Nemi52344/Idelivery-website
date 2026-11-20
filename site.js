@@ -11,17 +11,17 @@ const CONTACT = {
 
 // Impact numbers for the home page counters. Set `value` to a real number and it animates on load.
 const STATS = [
-  { value: 400, suffix: '+', label: 'EVs on the road' },
-  { value: 32000, suffix: '+', label: 'Km covered every day' }, // TODO: confirm; estimated as 400 EVs x 80 km a day, the same basis as the CO2 numbers
+  { value: 604, suffix: '', label: 'EVs on the road' },
+  { value: 767478, suffix: '', label: 'Km covered' },
   { value: 5, suffix: '', label: 'Active cities' },
 ];
 
 // City network (home page). Edit this list to match where iDelivery actually operates.
 const CITIES = [
-  { name: 'Delhi', region: 'National Capital Region', services: ['Rental', 'Leasing'], at: [28.6139, 77.2090] },
-  { name: 'Mumbai', region: 'Maharashtra', services: ['Rental', 'Leasing'], at: [19.0760, 72.8777], tag: 'l' },
+  { name: 'Delhi', region: 'National Capital Region', services: ['Rental', 'Leasing', 'Service'], at: [28.6139, 77.2090] },
+  { name: 'Mumbai', region: 'Maharashtra', services: ['Rental', 'Leasing', 'Service'], at: [19.0760, 72.8777], tag: 'l' },
   { name: 'Bengaluru', region: 'Karnataka', services: ['Rental', 'Leasing', 'Service'], at: [12.9716, 77.5946], tag: 'l' },
-  { name: 'Chennai', region: 'Tamil Nadu', services: ['Rental', 'Leasing'], at: [13.0827, 80.2707] },
+  { name: 'Chennai', region: 'Tamil Nadu', services: ['Rental', 'Leasing', 'Service'], at: [13.0827, 80.2707] },
   { name: 'Coimbatore', region: 'Tamil Nadu', services: ['Rental', 'Service'], at: [11.0168, 76.9558], tag: 'l' },
 ];
 
@@ -151,7 +151,7 @@ document.querySelectorAll('form[data-netlify]').forEach(form => {
 const need = new URLSearchParams(location.search).get('need');
 const needSelect = document.getElementById('f-need');
 if (need && needSelect) {
-  const pick = { lease: 'Lease EVs', own: 'Own our fleet', bulk: 'Own our fleet' }[need];
+  const pick = { lease: 'Lease EVs', own: 'Own your fleet', bulk: 'Own your fleet' }[need];
   if (pick) needSelect.value = pick;
 }
 
