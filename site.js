@@ -178,7 +178,7 @@ const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // The home page has its own Clients and Partners section ([data-clients]); other pages get a compact strip before the footer.
 // [file, name, height in px]: heights balance visual weight across wide wordmarks and square marks.
 const CLIENTS = [
-  ['tvs-mobility.png', 'TVS Mobility', 30], ['india-post.png', 'India Post', 52], ['dominos.svg', "Domino's", 30], ['instamart.svg', 'Swiggy Instamart', 41],
+  ['india-post.png', 'India Post', 52], ['dominos.svg', "Domino's", 30], ['instamart.svg', 'Swiggy Instamart', 41],
   ['zepto.svg', 'Zepto', 37], ['blinkit.svg', 'Blinkit', 54], ['zomato.svg', 'Zomato', 31], ['bigbasket.svg', 'bigbasket', 30], ['rapido.svg', 'Rapido', 40],
 ];
 const logoRow = hidden => `<ul class="logo-track"${hidden ? ' aria-hidden="true"' : ''}>` +
