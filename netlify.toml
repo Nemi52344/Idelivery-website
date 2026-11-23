@@ -1,0 +1,30 @@
+# Static site: no build step, no framework. Publish the repo root as it stands.
+[build]
+  publish = "."
+
+# The working notes live in the repo root, which means Netlify would serve them
+# at /CONTENT-CHECK.md and /IMAGE-PLAN.md to anyone who asks. They hold internal
+# review notes and a working email address, so they are blocked rather than
+# deleted — the files stay in git for us, they just are not on the website.
+[[redirects]]
+  from = "/CONTENT-CHECK.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/IMAGE-PLAN.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# No cache rules here on purpose. The image filenames carry no content hash
+# (img/team/vijay.jpg keeps its name when the photo changes), so a long
+# immutable cache would leave old pictures on people's screens for months.
+# Netlify's defaults revalidate, which is what this site wants.
