@@ -1,11 +1,11 @@
 // Shared header, footer, interactions for every page.
 // Edit contact details here once; every page picks them up.
 const CONTACT = {
-  phone: '+91 00000 00000',      // TODO: real number
-  phoneHref: 'tel:+910000000000',
-  whatsapp: 'https://wa.me/910000000000', // TODO: real WhatsApp number
-  email: 'hello@idelivery.in',    // TODO: confirm inbox
-  site: 'www.idelivery.in',       // TODO: confirm domain
+  phone: '+91 89392 45390',
+  phoneHref: 'tel:+918939245390',
+  whatsapp: 'https://wa.me/918939245390', // same number as the phone line
+  email: 'thauthkathri@bncmotors.in',
+  site: 'www.idelivery.in',       // TODO: this domain does not resolve
   linkedin: 'https://www.linkedin.com/company/idelivery_solutions/home/',
 };
 
