@@ -28,3 +28,22 @@
 # (img/team/vijay.jpg keeps its name when the photo changes), so a long
 # immutable cache would leave old pictures on people's screens for months.
 # Netlify's defaults revalidate, which is what this site wants.
+
+# ---------------------------------------------------------------------------
+# TEMPORARY: keep the site out of search results.
+#
+# The contact details on every page are still placeholders (+91 00000 00000,
+# hello@idelivery.in, "[address line], [city] [PIN]"). If Google indexes those
+# now, the wrong number outlives the fix — cached snippets and stale results
+# hang around long after the page changes.
+#
+# Deliberately NOT done with robots.txt: blocking the crawl would stop Google
+# from ever reading this header, and a URL linked from elsewhere could still be
+# indexed bare. Letting it crawl and telling it "noindex" is what actually works.
+#
+# DELETE THIS WHOLE BLOCK the moment the real phone, email and address are in.
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
